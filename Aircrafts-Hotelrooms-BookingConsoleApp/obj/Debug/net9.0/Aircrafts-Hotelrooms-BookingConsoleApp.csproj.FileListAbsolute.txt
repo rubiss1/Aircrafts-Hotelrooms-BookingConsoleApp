@@ -1,0 +1,15 @@
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\bin\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.exe
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\bin\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.deps.json
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\bin\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.runtimeconfig.json
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\bin\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.dll
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\bin\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.pdb
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\obj\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\obj\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.AssemblyInfoInputs.cache
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\obj\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.AssemblyInfo.cs
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\obj\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.csproj.CoreCompileInputs.cache
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\obj\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.sourcelink.json
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\obj\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.dll
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\obj\Debug\net9.0\refint\Aircrafts-Hotelrooms-BookingConsoleApp.dll
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\obj\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.pdb
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\obj\Debug\net9.0\Aircrafts-Hotelrooms-BookingConsoleApp.genruntimeconfig.cache
+C:\Aircrafts-Hotelrooms-BookingConsoleApp\Aircrafts-Hotelrooms-BookingConsoleApp\obj\Debug\net9.0\ref\Aircrafts-Hotelrooms-BookingConsoleApp.dll

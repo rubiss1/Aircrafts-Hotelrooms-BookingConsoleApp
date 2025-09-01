@@ -308,6 +308,7 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
             Console.WriteLine("| 4 - Book a seat an aircraft\t\t|");
             Console.WriteLine("| 5 - Get an aircrafts revenue\t\t|");
             Console.WriteLine("| 6 - Get full revenue details\t\t|");
+            Console.WriteLine("| 7 - Get revenue of whole airport\t\t|");
             Console.WriteLine("| 0 - Back to main menu\t\t\t|");
             PrintLine();
 
@@ -462,6 +463,11 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
                             Console.Write("Aircraft ID: ");
                             aircraftId = Console.ReadLine();
                             AircraftNettoDetails(aircraftId);
+                            break;
+                        case 7: //make a methode to get the profits of the whole aircrafts 
+                            AllAircraftsIds();
+                            Console.Write("Aircraft ID: ");
+                            aircraftId = Console.ReadLine();
                             break;
                         case 0:
                             break;
@@ -662,7 +668,7 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
             {
                 double amountOfSeats = CountingStatus(aircraft.GetSeats(), 'X');
                 double cost = aircraft.GetRevenue() * amountOfSeats;
-                netto = cost - aircraft.GetRevenue();
+                netto = cost - aircraft.GetCost();
                 Console.WriteLine($"The netto of aircraft {id} is {netto}");
                 Console.WriteLine($"Profit = {netto - aircraft.GetCost()}");
             }
@@ -681,7 +687,7 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
                     Aircraft allCrafts = item.Value;
                     double amountOfSeats = CountingStatus(allCrafts.GetSeats(), 'X');
                     double cost = allCrafts.GetRevenue() * amountOfSeats;
-                    netto = cost - allCrafts.GetRevenue();
+                    netto = cost - allCrafts.GetCost();
                     rev.Add(netto);
 
                 }
@@ -693,10 +699,10 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
             {
                 double amountOfSeats = CountingStatus(aircraft.GetSeats(), 'X');
                 double cost = aircraft.GetRevenue() * amountOfSeats;
-                netto = cost - aircraft.GetRevenue();
-                Console.WriteLine($"Total netto = {netto}");
+                netto = cost - aircraft.GetCost();
+                Console.WriteLine($"Total netto = {cost}");
                 Console.WriteLine($"Total cost = {aircraft.GetCost()}");
-                Console.WriteLine($"Netto profit = {netto - aircraft.GetCost()}");
+                Console.WriteLine($"Netto profit = {netto}");
             }
             Console.ReadLine();
         }
