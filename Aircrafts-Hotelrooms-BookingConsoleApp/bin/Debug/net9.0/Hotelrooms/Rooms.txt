@@ -1,0 +1,15 @@
+1,Basic,-
+2,Basic,-
+3,Basic,-
+4,Basic,-
+5,Basic,-
+6,Comfort,-
+7,Comfort,-
+8,Comfort,-
+9,Deluxe,-
+10,Deluxe,-
+11,Deluxe,-
+12,Exclusive,X
+13,Exclusive,X
+14,Exclusive,-
+15,Exclusive,-
