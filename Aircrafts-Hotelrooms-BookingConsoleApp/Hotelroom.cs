@@ -7,7 +7,7 @@
         Deluxe,
         Exclusive
     }
-    public class Hotelroom
+    public class Hotelroom : IBookable
     {
         //variables to be used
         private int roomNumber;

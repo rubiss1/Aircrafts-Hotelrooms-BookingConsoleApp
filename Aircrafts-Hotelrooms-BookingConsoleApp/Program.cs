@@ -104,7 +104,7 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
             PrintLine();
             Console.WriteLine("|\t1. Book a room (1- 4) people\t|");
             Console.WriteLine("|\t2. Check out of room\t\t|");
-            Console.WriteLine("|\t3. Get netto of the hotel\t\t|");
+            Console.WriteLine("|\t3. Get netto of the hotel\t|");
             Console.WriteLine("|\t0. Stop program\t\t\t|");
             PrintLine();
         }
@@ -254,22 +254,20 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
         }
         static void HotelroomsNetto(List<Hotelroom> rooms)
         {
-            double rev;
-            double cost;
+            double rev = 0;
+            double cost = 0;
             double totRev = 0;
+            int bookedCount = 0;
             foreach (var room in rooms)
             {
-                int bookedCount = 0;
-
-                if (!room.occupied)
+                if (room.occupied is true)
                 {
                     bookedCount++;
                 }
                 rev = room.GetRevenue() * bookedCount;
-                cost = room.GetCost() * rooms.Count;
-                totRev = rev - cost;
+                cost = room.GetCost();               
             }
-
+            totRev = rev - cost;
             Console.WriteLine($"total rev= {totRev}");
             Console.ReadLine();
 
