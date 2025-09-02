@@ -308,7 +308,7 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
             Console.WriteLine("| 4 - Book a seat an aircraft\t\t|");
             Console.WriteLine("| 5 - Get an aircrafts revenue\t\t|");
             Console.WriteLine("| 6 - Get full revenue details\t\t|");
-            Console.WriteLine("| 7 - Get revenue of whole airport\t\t|");
+            Console.WriteLine("| 7 - Get revenue of whole airport\t|");
             Console.WriteLine("| 0 - Back to main menu\t\t\t|");
             PrintLine();
 
@@ -446,7 +446,7 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
                                     AircraftArrive(aircraftId);
                             }
                             break;
-                        case 4: // booking a seat in a specific aircraft
+                        case 4: 
                             AllAircraftsIds();
                             Console.Write("Aircraft ID: ");
                             aircraftId = Console.ReadLine();
@@ -464,10 +464,8 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
                             aircraftId = Console.ReadLine();
                             AircraftNettoDetails(aircraftId);
                             break;
-                        case 7: //make a methode to get the profits of the whole aircrafts 
-                            AllAircraftsIds();
-                            Console.Write("Aircraft ID: ");
-                            aircraftId = Console.ReadLine();
+                        case 7: 
+                            AirportNetto();
                             break;
                         case 0:
                             break;
@@ -660,7 +658,7 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
             Aircraft aircraft = aircraftDict[id];
             if (aircraft is Helicopter helicopter && helicopter.IsMilitaryGetter())// if its military then it can not be shown
             {
-                RedColoredMessage("Can not show military aircraft revenue!");
+                RedColoredMessage("Military aircraft's revenue can not be show.");
                 Console.ReadLine();
                 return;
             }
@@ -681,17 +679,7 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
             Aircraft aircraft = aircraftDict[id];
             if (aircraft is Helicopter helicopter && helicopter.IsMilitaryGetter())// if its military then it can not be shown
             {
-                List<double> rev = new List<double> { };
-                foreach (var item in aircraftDict)
-                {
-                    Aircraft allCrafts = item.Value;
-                    double amountOfSeats = CountingStatus(allCrafts.GetSeats(), 'X');
-                    double cost = allCrafts.GetRevenue() * amountOfSeats;
-                    netto = cost - allCrafts.GetCost();
-                    rev.Add(netto);
-
-                }
-                Console.WriteLine($"Total revenue of all planes = {rev.Sum()}");
+                RedColoredMessage("Military aircraft's revenue can not be show.");
                 Console.ReadLine();
                 return;
             }
@@ -704,6 +692,32 @@ namespace Aircrafts_Hotelrooms_BookingConsoleApp
                 Console.WriteLine($"Total cost = {aircraft.GetCost()}");
                 Console.WriteLine($"Netto profit = {netto}");
             }
+            Console.ReadLine();
+        }
+        static void AirportNetto()
+        {
+            List<double> rev = new List<double> { };
+            List<double> cos = new List<double> { };
+            double netto = 0;
+            foreach (var item in aircraftDict)
+            {
+                Aircraft aircraft = item.Value;
+                if (aircraft is Helicopter hel && hel.IsMilitaryGetter())
+                {
+                    continue;
+                }
+                else
+                {
+                    double amountOfSeats = CountingStatus(aircraft.GetSeats(), 'X');
+                    double revenue = aircraft.GetRevenue() * amountOfSeats;
+                    double cost = aircraft.GetCost();
+                    rev.Add(revenue);
+                    cos.Add(cost);
+                }             
+            }
+            Console.WriteLine($"Total aircrafts revenue = {rev.Sum()}");
+            Console.WriteLine($"Total aircrafts cost = {cos.Sum()}");
+            Console.WriteLine($"Total airport profit = {rev.Sum() - cos.Sum()}");
             Console.ReadLine();
         }
         static void SaveAircraftEditsBackToFile()//methode to save updates made to aircrafts seats
